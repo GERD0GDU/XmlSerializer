@@ -12,14 +12,14 @@ ioCode.Serialization library has two serialization classes<br />
 ### XmlSerializer\<T\>
 
 #### Write to file
-```
+```csharp
   Product product = new Product();
   product.Name = "Product1";
   bool isSuccess = XmlSerializer<Product>.WriteFile(@"C:\users\[user]\documents\product.xml", product);
   MessageBox.Show(isSuccess ? "Success" : "Fail");
 ```
 #### Read from file
-```
+```csharp
   Product product = XmlSerializer<Product>.ReadFile(@"C:\users\[user]\documents\product.xml");
   MessageBox.Show((product != null) ? "Success" : "Fail");
 ```
@@ -27,14 +27,14 @@ ioCode.Serialization library has two serialization classes<br />
 ### BinSerializer\<T\>
 
 #### Write to file
-```
+```csharp
   Product product = new Product();
   product.Name = "Product1";
   bool isSuccess = BinSerializer<Product>.WriteFile(@"C:\users\[user]\documents\product.bin", "password123", product);
   MessageBox.Show(isSuccess ? "Success" : "Fail");
 ```
 #### Read from file
-```
+```csharp
   Product product = BinSerializer<Product>.ReadFile(@"C:\users\[user]\documents\product.bin", "password123");
   MessageBox.Show((product != null) ? "Success" : "Fail");
 ```
